@@ -1,0 +1,29 @@
+{
+  "name": "barraladojs",
+  "version": "0.0.0",
+  "homepage": "https://github.com/webones/barraladojs",
+  "authors": [
+    "Arandi Lopez <arandilopez.93@gmail.com>"
+  ],
+  "description": "BARRALADO plugin para barraladear",
+  "main": "barralado.js",
+  "keywords": [
+    "barralado",
+    "jquery",
+    "sidebars",
+    "uady",
+    "javascript",
+    "barraladoscript"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.11.1"
+  }
+}

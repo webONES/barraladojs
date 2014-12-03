@@ -3,7 +3,7 @@
 Este proyecto es para barraladear en javascript.
 
 ### Dependencias:
-* jQuery
+* jQuery (a.k.a. Jotacueri)
 
 ## Ejemplo de uso:
 

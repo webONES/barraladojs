@@ -4,7 +4,9 @@ var gulp = require('gulp'),
 	guglify = require('gulp-uglify');
 
 gulp.task('dist', function() {
-  return gulp.src('src/*.js')
+  return gulp.src([
+  		'barralado.js'
+  	])
         .pipe(gconcat('barralado.js'))
         .pipe(gulp.dest('dist/'))
         .pipe(grename('barraldo.min.js'))

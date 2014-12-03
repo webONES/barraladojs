@@ -1,6 +1,3 @@
-//*********************
-// Function barralado
-//*********************
 +function($) {
   $.fn.barralado = function (options) {
   if (typeof options != 'undefined' ) {
@@ -36,4 +33,3 @@
   });
 }
 }(jQuery);
-// END barralado

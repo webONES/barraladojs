@@ -1,0 +1,38 @@
+{
+  "name": "barraladojs",
+  "version": "0.1.0",
+  "description": "Libreria jQuery para barraladear",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.3.12",
+    "gulp": "^3.8.10",
+    "gulp-concat": "^2.4.2",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^1.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webones/barraladojs.git"
+  },
+  "keywords": [
+    "jquery",
+    "barralado",
+    "uady"
+  ],
+  "authors": [
+    "Arandi López <arandilopez.93@gmail.com>",
+    "José Ramón Camacho"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webones/barraladojs/issues"
+  },
+  "homepage": "https://github.com/webones/barraladojs"
+}

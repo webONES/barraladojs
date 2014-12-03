@@ -1,4 +1,5 @@
-$.fn.barralado = function (options) {
++function($) {
+  $.fn.barralado = function (options) {
   if (typeof options != 'undefined' ) {
     // if parameters exist
     if ( !('size' in options) ) {
@@ -31,3 +32,4 @@ $.fn.barralado = function (options) {
       });
   });
 }
+}(jQuery);

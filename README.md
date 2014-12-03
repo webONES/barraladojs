@@ -14,6 +14,8 @@ los parametros que la función `barralado` recibe son:
       size: 120  // es el tamaño del barralado, pues no todos los barralados son iguales.
     });
 
+Revisa el archivo `index.html` dentro de test.
+
 ## Contribuyendo
 
 ... Todo: escribir algo.

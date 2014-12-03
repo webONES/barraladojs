@@ -6,7 +6,9 @@
     "Arandi Lopez <arandilopez.93@gmail.com>"
   ],
   "description": "BARRALADO plugin para barraladear",
-  "main": "barralado.js",
+  "main": [
+    "./src/barralado.js"
+  ],
   "keywords": [
     "barralado",
     "jquery",

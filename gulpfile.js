@@ -5,11 +5,12 @@ var gulp = require('gulp'),
 
 gulp.task('dist', function() {
   return gulp.src([
-  		'barralado.js'
+      'src/helper.js',
+  		'src/barralado.js'
   	])
         .pipe(gconcat('barralado.js'))
         .pipe(gulp.dest('dist/'))
-        .pipe(grename('barraldo.min.js'))
+        .pipe(grename('barralado.min.js'))
         .pipe(guglify())
         .pipe(gulp.dest('dist/'));
 });

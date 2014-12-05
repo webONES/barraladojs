@@ -9,12 +9,17 @@ var gulp = require('gulp'),
 
 
 gulp.task('dist', function() {
-  return gulp.src('/src/js/*.js')
-        .pipe(gconcat('barralado.js'))
-        .pipe(gulp.dest('dist/'))
-        .pipe(grename('barralado.min.js'))
-        .pipe(guglify())
-        .pipe(gulp.dest('dist/'));
+  return gulp.src(
+		[
+			'src/js/barrayuda.js.js',
+			'src/js/barralado.js.js'
+		]
+	)
+    .pipe(gconcat('barralado.js'))
+    .pipe(gulp.dest('dist/'))
+    .pipe(grename('barralado.min.js'))
+    .pipe(guglify())
+    .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('lint', function (){
@@ -24,13 +29,13 @@ gulp.task('lint', function (){
 });
 
 gulp.task('coffee', ['lint'], function (){
-	gulp.src('./src/coffee/*.coffee')
-		.pipe(gcoffee({bare: true}).on('error', gutil.log))
-		.pipe(gulp.dest('./src/js/'));
+	gulp.src('src/coffee/*.coffee')
+		.pipe(gcoffee({bare: false}).on('error', gutil.log))
+		.pipe(gulp.dest('src/js/'));
 });
 
 gulp.task('clean', function (){
-	gulp.src('./dist/', {read: false})
+	gulp.src('dist/', {read: false})
 		.pipe(clean());
 });
 

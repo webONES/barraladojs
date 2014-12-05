@@ -15,6 +15,10 @@ los parametros que la función `barralado` recibe son:
       height: 450 // la altura del barralado #value
     });
 
+Otro ejemplo es:
+
+    $('#elemento').barralado().delOtroLado({size: 300, height: 300});
+
 Revisa el archivo `index.html` dentro de test.
 
 ## Contribuyendo

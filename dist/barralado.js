@@ -1,94 +1,73 @@
-;(function ($) {
-(function() {
-  var Barrayuda;
+var Barrayuda;
 
-  Barrayuda = (function() {
-    function Barrayuda() {}
+Barrayuda = (function() {
+  function Barrayuda() {}
 
-    Barrayuda.sayHello = function(argument) {
-      return alert('hi');
+  Barrayuda.properties = function(options) {
+    var luckySide, luckyTop, luckyZ;
+    luckyTop = Math.floor(Math.random() * (500 - 0)) + 0;
+    luckySide = Math.floor(Math.random() * (options["size"] - 0)) + 0;
+    luckyZ = Math.floor(Math.random() * (5 - -5)) + -5;
+    return {
+      "overflow": "scroll",
+      "position": "absolute",
+      "max-width": options["size"] + "px",
+      "margin-top": "0px",
+      "margin-left": "0px",
+      "margin-right": "0px",
+      "margin-bottom": "0px",
+      "bottom": "0px",
+      "z-index": luckyZ,
+      "top": luckyTop + "px",
+      "left": luckySide + "px",
+      "right": luckySide + "px"
     };
-
-    return Barrayuda;
-
-  })();
-
-}).call(this);
-
-(function() {
-  $.fn.delOtroLado = function(options) {
-    if (typeof options !== "undefined") {
-      if (!("size" in options)) {
-        options["size"] = "120";
-      }
-    } else {
-      options = {};
-      options["size"] = "120";
-    }
-    $(this).find("*").each(function() {
-      var luckyLeft, luckyTop, luckyZ;
-      luckyTop = Math.floor(Math.random() * (500 - 0)) + 0;
-      luckyLeft = Math.floor(Math.random() * (options["size"] - 0)) + 0;
-      luckyZ = Math.floor(Math.random() * (5 - -5)) + -5;
-      Barrayuda.sayHello();
-      $(this).css({
-        overflow: "scroll",
-        float: "left",
-        "max-width": options["size"] + "px",
-        position: "absolute",
-        "margin-top": "0px",
-        "margin-left": "0px",
-        "margin-right": "0px",
-        "margin-bottom": "0px",
-        "right": "0px",
-        "bottom": "0px",
-        "z-index": luckyZ,
-        "top": luckyTop + "px",
-        "left": luckyLeft + "px"
-      });
-    });
   };
 
-  return;
+  return Barrayuda;
 
-}).call(this);
+})();
 
-(function() {
-  $.fn.barralado = function(options) {
-    if (typeof options !== "undefined") {
-      if (!("size" in options)) {
-        options["size"] = "120";
-      }
-    } else {
-      options = {};
+var $;
+
+$ = jQuery;
+
+$.fn.delOtroLado = function(options) {
+  if (typeof options !== "undefined") {
+    if (!("size" in options)) {
       options["size"] = "120";
     }
-    $(this).find("*").each(function() {
-      var luckyLeft, luckyTop, luckyZ;
-      luckyTop = Math.floor(Math.random() * (500 - 0)) + 0;
-      luckyLeft = Math.floor(Math.random() * (options["size"] - 0)) + 0;
-      luckyZ = Math.floor(Math.random() * (5 - -5)) + -5;
-      Barrayuda.sayHello();
-      $(this).css({
-        overflow: "scroll",
-        float: "left",
-        "max-width": options["size"] + "px",
-        position: "absolute",
-        "margin-top": "0px",
-        "margin-left": "0px",
-        "margin-right": "0px",
-        "margin-bottom": "0px",
-        "right": "0px",
-        "bottom": "0px",
-        "z-index": luckyZ,
-        "top": luckyTop + "px",
-        "left": luckyLeft + "px"
-      });
+  } else {
+    options = {};
+    options["size"] = "120";
+  }
+  $(this).find("*").each(function() {
+    $(this).css(Barrayuda.properties(options));
+    $(this).css({
+      "left": ""
     });
-  };
+  });
+  return $(this);
+};
 
-  return;
+var $;
 
-}).call(this);
+$ = jQuery;
 
-})(jQuery);
+$.fn.barralado = function(options) {
+  if (typeof options !== "undefined") {
+    if (!("size" in options)) {
+      options["size"] = "120";
+    }
+  } else {
+    options = {};
+    options["size"] = "120";
+  }
+  $(this).find("*").each(function() {
+    $(this).css(Barrayuda.properties(options));
+    $(this).css({
+      "right": ""
+    });
+  });
+  return $(this);
+};

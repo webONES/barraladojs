@@ -19,7 +19,6 @@ gulp.task('dist', function() {
 		]
 	)
     .pipe(gconcat('barralado.js'))
-		.pipe(jqc())
     .pipe(gulp.dest('dist/'))
     .pipe(grename('barralado.min.js'))
     .pipe(guglify())
@@ -34,7 +33,7 @@ gulp.task('lint', function (){
 
 gulp.task('coffee', ['lint'], function (){
 	gulp.src('src/coffee/*.coffee')
-		.pipe(gcoffee({bare: false}).on('error', gutil.log))
+		.pipe(gcoffee({bare: true}).on('error', gutil.log))
 		.pipe(gulp.dest('src/js/'));
 });
 
@@ -43,6 +42,6 @@ gulp.task('clean', function (){
 		.pipe(clean());
 });
 
-gulp.task('build', ['clean', 'coffee', 'dist']);
+gulp.task('build', ['clean', 'lint', 'coffee', 'dist']);
 
 gulp.task('default', ['build']);

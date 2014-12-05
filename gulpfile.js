@@ -9,10 +9,10 @@ var gulp = require('gulp'),
 
 
 gulp.task('dist', function() {
-  return gulp.src(
+  gulp.src(
 		[
-			'src/js/barrayuda.js.js',
-			'src/js/barralado.js.js'
+			'src/js/barrayuda.js',
+			'src/js/barralado.js'
 		]
 	)
     .pipe(gconcat('barralado.js'))
@@ -39,6 +39,6 @@ gulp.task('clean', function (){
 		.pipe(clean());
 });
 
-gulp.task('build', ['clean', 'lint', 'coffee', 'dist']);
+gulp.task('build', ['clean', 'coffee', 'dist']);
 
 gulp.task('default', ['build']);

@@ -5,6 +5,7 @@ var gulp = require('gulp'),
 	guglify = require('gulp-uglify'),
 	gcoffee = require('gulp-coffee'),
 	clean = require('gulp-clean'),
+	jqc = require('gulp-jquery-closure'),
 	gcoffeelint = require('gulp-coffeelint');
 
 
@@ -12,10 +13,13 @@ gulp.task('dist', function() {
   gulp.src(
 		[
 			'src/js/barrayuda.js',
-			'src/js/barralado.js'
+			'src/js/delOtroLado.js',
+			'src/js/barralado.js',
+
 		]
 	)
     .pipe(gconcat('barralado.js'))
+		.pipe(jqc())
     .pipe(gulp.dest('dist/'))
     .pipe(grename('barralado.min.js'))
     .pipe(guglify())

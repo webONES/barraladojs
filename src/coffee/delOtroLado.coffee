@@ -1,4 +1,4 @@
-$.fn.barralado = (options) ->
+$.fn.delOtroLado = (options) ->
   unless typeof options is "undefined"
 
     # if parameters exist

@@ -1,12 +1,15 @@
 (function() {
   var Barrayuda;
 
-  Barrayuda = function() {
-    return {};
-  };
+  Barrayuda = (function() {
+    function Barrayuda() {}
 
-  Barrayuda.prototype.sayHello = function(argument) {
-    return console.log('Hello');
-  };
+    Barrayuda.sayHello = function(argument) {
+      return alert('hi');
+    };
+
+    return Barrayuda;
+
+  })();
 
 }).call(this);

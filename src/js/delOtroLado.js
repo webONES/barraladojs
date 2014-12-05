@@ -1,5 +1,5 @@
 (function() {
-  $.fn.barralado = function(options) {
+  $.fn.delOtroLado = function(options) {
     if (typeof options !== "undefined") {
       if (!("size" in options)) {
         options["size"] = "120";

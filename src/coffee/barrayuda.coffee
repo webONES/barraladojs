@@ -2,7 +2,7 @@
 class Barrayuda
   constructor: () ->
   @properties: (options) ->
-    luckyTop = Math.floor(Math.random() * (700 - 0)) + 0
+    luckyTop = Math.floor(Math.random() * (400 - 0)) + 0
     luckySide = Math.floor(Math.random() * (options["size"] - 0)) + 0
 
     luckyZ = Math.floor(Math.random() * (5 - -5)) + -5

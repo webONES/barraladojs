@@ -1,6 +1,6 @@
 # BARRALADO JS
 
-Este proyecto es para barraladear en javascript.
+Este proyecto es para barraladear en javascript. La construccion de esta libreria ha sido puesta en [Coffee Script](http://coffeescript.org/).
 
 ### Dependencias:
 * jQuery (a.k.a. Jotacueri)
@@ -25,4 +25,4 @@ Revisa el archivo `index.html` dentro de test.
 5. Haz tu commit y sube tu pull request.
 
 Para construir barralado.js:
-* Ejecuta `gulp dist`. Y usa los archivos `dist/barralado.js` o `dist/barralado.min.js` según necesites.
+* Ejecuta `gulp build`. Y usa los archivos `dist/barralado.js` o `dist/barralado.min.js` según necesites.

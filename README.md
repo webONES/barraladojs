@@ -11,7 +11,8 @@ Una vez que tengas tu DOM listo, puedes libremente llamar la funcion `barralado`
 los parametros que la función `barralado` recibe son:
 
     $('#elemento').barralado({
-      size: 120  // es el tamaño del barralado, pues no todos los barralados son iguales.
+      size: 220,// el ancho del barralado, pues no todos los barralados son iguales. #value
+      height: 450 // la altura del barralado #value
     });
 
 Revisa el archivo `index.html` dentro de test.

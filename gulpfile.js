@@ -6,7 +6,8 @@ var gulp = require('gulp'),
 	gcoffee = require('gulp-coffee'),
 	clean = require('gulp-clean'),
 	jqc = require('gulp-jquery-closure'),
-	gcoffeelint = require('gulp-coffeelint');
+	gcoffeelint = require('gulp-coffeelint'),
+	runSequence = require('run-sequence');
 
 
 gulp.task('dist', function() {
@@ -42,6 +43,10 @@ gulp.task('clean', function (){
 		.pipe(clean());
 });
 
-gulp.task('build', ['clean', 'lint', 'coffee', 'dist']);
+gulp.task('build', function(){
+	runSequence('clean', 'coffee', 'dist', function(){
+		// console.log('Barralado.js has been built. ;)');
+	});
+});
 
 gulp.task('default', ['build']);

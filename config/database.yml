@@ -81,5 +81,4 @@ test:
 production:
   <<: *default
   database: barralado_production
-  username: barralado
   password: <%= ENV['BARRALADO_DATABASE_PASSWORD'] %>

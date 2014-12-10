@@ -1,6 +1,5 @@
 class ErrorsController < ApplicationController
   before_action :set_error, only: [:show, :edit, :update, :destroy]
-  format :json
   # GET /errors
   # GET /errors.json
   def index

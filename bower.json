@@ -8,7 +8,7 @@
   ],
   "description": "BARRALADO plugin para barraladear",
   "main": [
-    "./src/barralado.js"
+    "./dist/barralado.js"
   ],
   "keywords": [
     "barralado",
